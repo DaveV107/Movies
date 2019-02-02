@@ -1,6 +1,3 @@
-alter table directors nocheck constraint all;
-alter table ratings nocheck constraint all;
-alter table movies nocheck constraint all;
 
 set identity_insert directors on;
 -- directors
