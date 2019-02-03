@@ -1,6 +1,4 @@
-alter table directors nocheck constraint all;
-alter table ratings nocheck constraint all;
-alter table movies nocheck constraint all;
+-- SQL Server specifics: Note remove 'set identity_insert' before running locally using H2
 
 set identity_insert directors on;
 -- directors
