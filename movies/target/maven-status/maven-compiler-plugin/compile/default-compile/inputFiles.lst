@@ -1,0 +1,16 @@
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/service/MovieService.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/entity/MovieEntity.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/controller/RatingsController.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/repository/RatingRepository.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/service/impl/DirectorServiceImpl.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/service/RatingService.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/service/impl/MovieServiceImpl.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/service/impl/RatingServiceImpl.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/controller/MoviesController.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/entity/RatingEntity.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/service/DirectorService.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/MoviesApplication.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/controller/DirectorsController.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/repository/DirectorRepository.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/repository/MovieRepository.java
+/workfiles/intellij-projects/movies/src/main/java/com/company/catalogs/movies/entity/DirectorEntity.java
