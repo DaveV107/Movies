@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "directors")

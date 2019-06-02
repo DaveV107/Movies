@@ -16,27 +16,27 @@ public class RatingsController {
 
     private final RatingService service;
 
-    @GetMapping(path = "/api/v1/ratings", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(path = "/ratings", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     List<RatingEntity> all(){
         return service.all();
     }
 
-    @GetMapping(path = "/api/v1/ratings/{rating}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(path = "/ratings/{rating}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     RatingEntity one(@PathVariable(name = "rating") Long rating){
         return service.one(rating);
     }
 
-    @PutMapping(path = "/api/v1/ratings")
+    @PutMapping(path = "/ratings")
     public ResponseEntity<?> update (@RequestBody RatingEntity ratingEntity) throws URISyntaxException {
         return service.update(ratingEntity);
     }
 
-    @PostMapping(path = "/api/v1/ratings")
+    @PostMapping(path = "/ratings")
     public ResponseEntity<?> add (@RequestBody RatingEntity ratingEntity) throws URISyntaxException {
         return service.add(ratingEntity);
     }
 
-    @DeleteMapping(path = "/api/v1/ratings/{rating}")
+    @DeleteMapping(path = "/ratings/{rating}")
     public ResponseEntity<?> delete (@PathVariable Long rating){
         return service.delete(rating);
     }

@@ -15,27 +15,27 @@ import java.util.List;
 public class DirectorsController {
     private final DirectorService service;
 
-    @GetMapping(path = "/api/v1/directors", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(path = "/directors", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public List<DirectorEntity> all(){
         return service.all();
     }
 
-    @GetMapping(path = "/api/v1/directors/{director}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(path = "/directors/{director}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public DirectorEntity one(@PathVariable(name = "director") Long director){
         return service.one(director);
     }
 
-    @PutMapping(path = "/api/v1/directors")
+    @PutMapping(path = "/directors")
     public ResponseEntity<?> update (@RequestBody DirectorEntity directorEntity) throws URISyntaxException {
         return service.update(directorEntity);
     }
 
-    @PostMapping(path = "/api/v1/directors")
+    @PostMapping(path = "/directors")
     public ResponseEntity<?> add (@RequestBody DirectorEntity directorEntity) throws URISyntaxException {
         return service.add(directorEntity);
     }
 
-    @DeleteMapping(path = "/api/v1/directors/{director}")
+    @DeleteMapping(path = "/directors/{director}")
     public ResponseEntity<?> delete (@PathVariable Long director){
         return service.delete(director);
     }
