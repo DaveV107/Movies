@@ -33,12 +33,18 @@ public class DirectorServiceImpl implements DirectorService {
 
     @Override
     public ResponseEntity<?> update(DirectorEntity directorEntity) throws URISyntaxException {
-        repository.findById(directorEntity.getDirector())
-                .orElseThrow(()->new RuntimeException("cannot find director with id " + directorEntity.getDirector()));
-        DirectorEntity director = repository.save(directorEntity);
-        return ResponseEntity
-                .created(new URI(director.getDirector().toString()))
-                .body(director);
+        if (repository.findById(directorEntity.getDirector())
+                .orElseThrow(() -> new RuntimeException("cannot find director with id " + directorEntity.getDirector())) != null){
+            DirectorEntity director = repository.save(directorEntity);
+            return ResponseEntity
+                    .created(new URI(director.getDirector().toString()))
+                    .body(director);
+        } else {
+            return ResponseEntity
+                    .notFound()
+                    .build();
+        }
+        
     }
 
     @Override
