@@ -1,6 +1,7 @@
 package com.company.catalogs.movies.service.impl;
 
 import com.company.catalogs.movies.entity.DirectorEntity;
+import com.company.catalogs.movies.exceptions.DirectorException;
 import com.company.catalogs.movies.repository.DirectorRepository;
 import com.company.catalogs.movies.service.DirectorService;
 import lombok.AllArgsConstructor;
@@ -34,7 +35,7 @@ public class DirectorServiceImpl implements DirectorService {
     @Override
     public ResponseEntity<?> update(DirectorEntity directorEntity) throws URISyntaxException {
         if (repository.findById(directorEntity.getDirector())
-                .orElseThrow(() -> new RuntimeException("cannot find director with id " + directorEntity.getDirector())) != null){
+                .orElseThrow(() -> new DirectorException("cannot find director with id " + directorEntity.getDirector())) != null){
             DirectorEntity director = repository.save(directorEntity);
             return ResponseEntity
                     .created(new URI(director.getDirector().toString()))

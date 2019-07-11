@@ -1,6 +1,7 @@
 package com.company.catalogs.movies.service.impl;
 
 import com.company.catalogs.movies.entity.MovieEntity;
+import com.company.catalogs.movies.exceptions.MovieException;
 import com.company.catalogs.movies.repository.MovieRepository;
 import com.company.catalogs.movies.service.MovieService;
 import lombok.AllArgsConstructor;
@@ -27,7 +28,7 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public MovieEntity one(Long movie) {
         return repository.findById(movie)
-                .orElseThrow(()-> new RuntimeException("cannot find movie by that id " + movie));
+                .orElseThrow(()-> new MovieException("cannot find movie by that id " + movie));
     }
 
     @Override

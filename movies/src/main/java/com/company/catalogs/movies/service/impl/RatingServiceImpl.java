@@ -1,6 +1,7 @@
 package com.company.catalogs.movies.service.impl;
 
 import com.company.catalogs.movies.entity.RatingEntity;
+import com.company.catalogs.movies.exceptions.RatingException;
 import com.company.catalogs.movies.repository.RatingRepository;
 import com.company.catalogs.movies.service.RatingService;
 import lombok.AllArgsConstructor;
@@ -28,7 +29,7 @@ public class RatingServiceImpl implements RatingService {
     @Override
     public RatingEntity one(Long rating) {
         return repository.findById(rating)
-                .orElseThrow(() -> new RuntimeException("cannot find rating with id " + rating));
+                .orElseThrow(() -> new RatingException("cannot find rating with id " + rating));
     }
 
     @Override
