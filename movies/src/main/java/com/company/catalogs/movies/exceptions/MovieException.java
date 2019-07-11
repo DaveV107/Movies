@@ -1,5 +1,7 @@
 package com.company.catalogs.movies.exceptions;
 
+import com.company.catalogs.movies.exceptions.enums.ExceptionErrorCodes;
+
 public class MovieException extends RuntimeException {
     public MovieException(String message) {
         super(message);

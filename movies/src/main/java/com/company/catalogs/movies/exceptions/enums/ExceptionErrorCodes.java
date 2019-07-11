@@ -1,4 +1,4 @@
-package com.company.catalogs.movies.exceptions;
+package com.company.catalogs.movies.exceptions.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

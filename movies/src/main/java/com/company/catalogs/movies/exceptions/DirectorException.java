@@ -1,5 +1,7 @@
 package com.company.catalogs.movies.exceptions;
 
+import com.company.catalogs.movies.exceptions.enums.ExceptionErrorCodes;
+
 public class DirectorException extends RuntimeException {
 
     public DirectorException(String message) {
